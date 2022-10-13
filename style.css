@@ -37,8 +37,7 @@ body {
 }
 
 
-.job-time {
-    width:40%;
+.job-time { 
     overflow:auto;
     float:left;
     font-weight: bold; 
