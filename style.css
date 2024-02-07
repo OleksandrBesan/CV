@@ -17,21 +17,22 @@ body {
     text-align:center;
 } 
 .block-left{
-    width:30%;
-    height:750px;
+    width:35%;
+    height:950px;
     margin-right: 4%;   
     overflow:auto;
     float:left;
 }
 .block-right{
-    width:65%;
-    height:750px; 
+    width:60%;
+    height:950px; 
     overflow:auto;
 }
 
 
 .block-inner{
     width:99%;
+    font-size: 13px;
     overflow:auto;
     text-align: justify;
 }
@@ -56,6 +57,7 @@ body {
 .block-skills{
     width:99%;
     overflow:auto; 
+    font-size: 13px;
     text-align:justify;
 }
 .skills {  
@@ -122,4 +124,15 @@ pre {
     font-variant: normal; 
     font-weight: 400; 
     line-height: 18.5714px; 
+}
+
+@page {
+    margin-left: 1.2 cm;
+    margin-right: 2.1 cm;
+    size: A4;
+    size: portait;
+}
+
+header,footer,aside, nav, form,iframe {
+    display: none;
 }
