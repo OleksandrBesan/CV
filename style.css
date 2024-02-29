@@ -2,31 +2,38 @@
 
 body {
     font-family: Georgia;
-    font-size: 16px;
-    margin: 0 auto;  
-    max-width: 1000px; 
+    width: 21cm;
+    height: 29.7cm;
+    margin: 0.5cm auto;
 }
   
 #header {
     margin-bottom:  5px;
     width:100%;
     text-align:left;
+    padding: 0.3cm;
+}
+#summary { 
+    padding: 0.3cm;
 }
 #footer { 
     margin-top: 0px;
     text-align:center;
+    padding: 0.3cm;
 } 
 .block-left{
     width:35%;
     height:950px;
-    margin-right: 4%;   
+    margin-right:  1%;   
     overflow:auto;
     float:left;
+    padding: 0.3cm;
 }
 .block-right{
     width:60%;
     height:950px; 
-    overflow:auto;
+    overflow:auto; 
+    padding: 0.1cm;
 }
 
 
@@ -34,7 +41,7 @@ body {
     width:99%;
     font-size: 13px;
     overflow:auto;
-    text-align: justify;
+    text-align: justify; 
 }
 
 
@@ -46,11 +53,23 @@ body {
 .job { 
     overflow:auto;
 }
-.job-description {
+.job-technologies {
+    float: left; 
     font-size: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
-} 
+    margin-left: 15px;
+    display: inline-block; /* or inline-flex */
+    width: 100%;
+}  
+.job-description {
+    font-size: 12px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    display: inline-block; /* or inline-flex */
+    width: 100%;
+}  
 .skills div {
     float: left; 
 }
@@ -101,6 +120,15 @@ h3 {
     font-weight: 700; 
     line-height: 15.4px; 
     } 
+h4 { 
+    font-family: "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif; 
+    font-size: 13px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 15.4px; 
+    margin: 0.2px;
+} 
 p { 
     font-family: "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif; 
     font-size: 14px; 
@@ -126,13 +154,38 @@ pre {
     line-height: 18.5714px; 
 }
 
-@page {
-    margin-left: 1.2 cm;
-    margin-right: 2.1 cm;
-    size: A4;
-    size: portait;
+page {
+background: white;
+display: block;
+margin: 0.5cm auto;
+margin-bottom: 0.5cm;
+position: relative;
 }
 
+page[size="A4"] {  
+width: 21cm;
+height: 29.7cm; 
+}
+
+@page {
+size: 21cm 29.7cm;
+margin: 0mm;
+} 
+
+@media screen {
+    /* Styles for screen viewing */
+    page:not(:first-of-type)     {
+        border-top: 1px solid #000; /* This adds a line to the left of the right block */
+        padding-top: 20px; /* This adds some space between the line and the text */
+    } 
+}
+
+@media print {
+    /* Styles for printing */
+    .divider, .block-right {
+        border: none; 
+    }
+}
 header,footer,aside, nav, form,iframe {
     display: none;
 }
