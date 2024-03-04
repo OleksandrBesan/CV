@@ -28,20 +28,23 @@ body {
     overflow:auto;
     float:left;
     padding: 0.3cm;
+    word-wrap: break-word;  
+    white-space: normal;
 }
 .block-right{
     width:60%;
     height:950px; 
     overflow:auto; 
     padding: 0.1cm;
+    word-wrap: break-word;  
+    white-space: normal;
 }
 
 
 .block-inner{
-    width:99%;
+    width:100%;
     font-size: 13px;
     overflow:auto;
-    text-align: justify; 
 }
 
 
@@ -61,6 +64,8 @@ body {
     margin-left: 15px;
     display: inline-block; /* or inline-flex */
     width: 100%;
+    word-wrap: break-word;  
+    white-space: normal; 
 }  
 .job-description {
     font-size: 12px; 
@@ -69,6 +74,8 @@ body {
     margin-left: 15px;
     display: inline-block; /* or inline-flex */
     width: 100%;
+    word-wrap: break-word;  
+    white-space: normal; 
 }  
 .skills div {
     float: left; 
