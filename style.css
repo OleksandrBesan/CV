@@ -42,7 +42,7 @@ body {
 
 
 .block-inner{
-    width:100%;
+    width:99%;
     font-size: 13px;
     overflow:auto;
 }
@@ -62,20 +62,24 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 15px;
+    margin-right: 5px;
     display: inline-block; /* or inline-flex */
-    width: 100%;
+    width: calc(100% - 20px);  
     word-wrap: break-word;  
-    white-space: normal; 
+    white-space: normal;
+    text-align: justify; 
 }  
 .job-description {
     font-size: 12px; 
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 15px;
-    display: inline-block; /* or inline-flex */
-    width: 100%;
+    margin-right: 5px;
+    display: inline-block; /* or inline-flex */ 
+    width: calc(100% - 20px);  
     word-wrap: break-word;  
-    white-space: normal; 
+    white-space: normal;
+    text-align: justify; 
 }  
 .skills div {
     float: left; 
