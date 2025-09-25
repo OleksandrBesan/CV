@@ -27,7 +27,7 @@ body {
     margin-right:  1%;   
     overflow:auto;
     float:left;
-    padding: 0.3cm;
+    padding: 0.2cm;
     word-wrap: break-word;  
     white-space: normal;
 }
@@ -43,7 +43,7 @@ body {
 
 .block-inner{
     width:99%;
-    font-size: 13px;
+    font-size: 12px;
     overflow:auto;
 }
 
