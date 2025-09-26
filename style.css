@@ -90,6 +90,21 @@ body {
     font-size: 13px;
     text-align:justify;
 }
+.block-achievements{
+    width:99%;
+    overflow:auto; 
+    font-size: 12px;
+    text-align:justify;
+}
+.block-lang{
+  font-size: 11px;
+}
+.block-education{
+  font-size: 10px;
+}
+.block-skills div {
+    padding-top: 4px; /* or the minimal value you prefer */
+}
 .skills {  
 border-radius: 3px 3px 3px 3px;
 display: inline-block;
