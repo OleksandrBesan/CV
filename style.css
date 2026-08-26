@@ -1,217 +1,248 @@
-
-
-body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    width: 21cm;
-    height: 29.7cm;
-    margin: 0.5cm auto;
-}
-  
-#header {
-    margin-bottom:  5px;
-    width:100%;
-    text-align:left;
-    padding: 0.3cm;
-}
-#summary { 
-    padding: 0.3cm;
-}
-#footer { 
-    margin-top: 0px;
-    text-align:center;
-    padding: 0.3cm;
-} 
-.block-left{
-    width:35%;
-    height:950px;
-    margin-right:  1%;   
-    overflow:auto;
-    float:left;
-    padding: 0.2cm;
-    word-wrap: break-word;  
-    white-space: normal;
-}
-.block-right{
-    width:60%;
-    height:950px; 
-    overflow:auto; 
-    padding: 0.1cm;
-    word-wrap: break-word;  
-    white-space: normal;
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('fonts/DepartureMono-Regular.woff2') format('woff2'),
+       url('fonts/DepartureMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-
-.block-inner{
-    width:99%;
-    font-size: 12px;
-    overflow:auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.job-time { 
-    overflow:auto;
-    float:left;
-    font-weight: bold; 
-}
-.job { 
-    overflow:auto;
-}
-.job-technologies {
-    float: left; 
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    margin-right: 5px;
-    display: inline-block; /* or inline-flex */
-    width: calc(100% - 20px);  
-    word-wrap: break-word;  
-    white-space: normal;
-    text-align: justify; 
-}  
-.job-description {
-    font-size: 12px; 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    margin-right: 5px;
-    display: inline-block; /* or inline-flex */ 
-    width: calc(100% - 20px);  
-    word-wrap: break-word;  
-    white-space: normal;
-    text-align: justify; 
-}  
-.skills div {
-    float: left; 
-}
-.block-skills{
-    width:99%;
-    overflow:auto; 
-    font-size: 13px;
-    text-align:justify;
-}
-.block-achievements{
-    width:99%;
-    overflow:auto; 
-    font-size: 12px;
-    text-align:justify;
-}
-.block-lang{
+html {
+  font-family: "Departure Mono", monospace;
   font-size: 11px;
 }
-.block-education{
-  font-size: 10px;
-}
-.block-skills div {
-    padding-top: 4px; /* or the minimal value you prefer */
-}
-.skills {  
-border-radius: 3px 3px 3px 3px;
-display: inline-block;
-height: 26px;
-position: relative;
-margin: 0 3px 3px 0;
-text-decoration: none;
--webkit-transition: color 0.2s;
-}
-    
-.skills.priority1 {
-    font-size: 20px;
-}
-    
-.skills.priority2 {
-    font-size: 17px;
-}
-    
-.skills.priority3 {
-    font-size: 15px;
-}
-    
-.skills.priority4 {
-    font-size: 13px;
-}
-h1 { 
-    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
-    font-size: 36px;
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 26.4px; 
-    } 
-h3 { 
-    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
-    font-size: 14px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 15.4px; 
-    } 
-h4 { 
-    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
-    font-size: 13px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 15.4px; 
-    margin: 0.2px;
-} 
-p { 
-    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif;
-    font-size: 14px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 400; 
-    line-height: 20px; 
-} 
-blockquote { 
-    font-family: "Inconsolata", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17.5px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 400; 
-    line-height: 25px; 
-} 
-pre { 
-    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI","Oxygen","Ubuntu","Cantarell","Open Sans",sans-serif; 
-    font-size: 13px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 400; 
-    line-height: 18.5714px; 
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  width: 21cm;
+  margin: 0 auto;
+  padding: 1cm;
 }
 
-page {
-background: white;
-display: block;
-margin: 0.5cm auto;
-margin-bottom: 0.5cm;
-position: relative;
+a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px dashed #000000;
+  padding-bottom: 1px;
+  transition: border-bottom-width 0.15s ease;
 }
 
-page[size="A4"] {  
-width: 21cm;
-height: 29.7cm; 
+a:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
+/* Header */
+.header {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1.5em;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+}
+
+.header .title {
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  opacity: 0.7;
+}
+
+.header .contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  font-size: 1em;
+}
+
+.header .contact span {
+  border-bottom: none;
+}
+
+/* Main layout */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3em;
+}
+
+/* Section headers */
+.section-header {
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #000;
+}
+
+/* Left column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.summary-text {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.skill-category {
+  margin-bottom: 1em;
+}
+
+.skill-category h3 {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+  opacity: 0.6;
+}
+
+.skill-category p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.achievements-list {
+  font-size: 1em;
+  line-height: 1.8;
+  list-style: none;
+}
+
+.achievements-list li {
+  margin-bottom: 0.5em;
+}
+
+.achievements-list li::before {
+  content: "~> ";
+  opacity: 0.5;
+}
+
+.projects-list {
+  font-size: 1em;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.projects-list li {
+  margin-bottom: 0.6em;
+}
+
+.projects-list li::before {
+  content: "~> ";
+  opacity: 0.5;
+}
+
+.info-block {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Right column - Experience */
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.job {
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px dashed #ccc;
+}
+
+.job:last-child {
+  border-bottom: none;
+}
+
+.job-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.job-title {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.job-company {
+  opacity: 0.7;
+}
+
+.job-company::before {
+  content: "| ";
+}
+
+.job-date {
+  margin-left: auto;
+  font-size: 0.9em;
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+}
+
+.job-tech {
+  font-size: 0.95em;
+  opacity: 0.7;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.job-description {
+  font-size: 1em;
+  line-height: 1.6;
+  list-style: none;
+  padding-left: 0;
+}
+
+.job-description li {
+  margin-bottom: 0.3em;
+}
+
+.job-description li::before {
+  content: "- ";
+  opacity: 0.5;
+}
+
+/* Print styles */
 @page {
-size: 21cm 29.7cm;
-margin: 0mm;
-} 
-
-@media screen {
-    /* Styles for screen viewing */
-    page:not(:first-of-type)     {
-        border-top: 1px solid #000; /* This adds a line to the left of the right block */
-        padding-top: 20px; /* This adds some space between the line and the text */
-    } 
+  size: A4;
+  margin: 1cm;
 }
 
 @media print {
-    /* Styles for printing */
-    .divider, .block-right {
-        border: none; 
-    }
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  .job {
+    page-break-inside: avoid;
+  }
 }
-header,footer,aside, nav, form,iframe {
-    display: none;
+
+@media screen {
+  body {
+    padding: 2cm 1cm;
+    max-width: 21cm;
+  }
 }
